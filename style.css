@@ -57,6 +57,12 @@ body {
   position: relative;
 }
 
+#total-inc h1,
+#total-exp h1 {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
 .fas {
   display: block;
   position: absolute;
@@ -105,6 +111,7 @@ body {
 
 #updater {
   padding: 2rem 0;
+  display: none;
 }
 
 #updater-form {

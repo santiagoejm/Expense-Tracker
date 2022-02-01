@@ -8,10 +8,10 @@ const incomeField = document.querySelector("#income-field");
 const expenseField = document.querySelector("#expense-field");
 
 const toggleHandler = () => {
-  if (updaterSection.style.display == "none") {
-    updaterSection.style.display = "flex";
-  } else {
+  if (updaterSection.style.display == "flex") {
     updaterSection.style.display = "none";
+  } else {
+    updaterSection.style.display = "flex";
   }
 };
 
@@ -20,8 +20,8 @@ let expenseCount = 0;
 
 const updaterHanndler = (e) => {
   e.preventDefault();
-  let newIncome = parseFloat(incomeField.value) || 0;
-  let newExpense = parseFloat(expenseField.value) || 0;
+  let newIncome = Math.abs(parseFloat(incomeField.value)) || 0;
+  let newExpense = Math.abs(parseFloat(expenseField.value)) || 0;
 
   incomeCount += newIncome;
   expenseCount += newExpense;
