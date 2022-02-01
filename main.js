@@ -20,6 +20,11 @@ let expenseCount = 0;
 
 const updaterHanndler = (e) => {
   e.preventDefault();
+
+  if (!incomeField.value && !expenseField.value) {
+    alert("No transaction received. Please insert new operations to proceed!");
+  }
+
   let newIncome = Math.abs(parseFloat(incomeField.value)) || 0;
   let newExpense = Math.abs(parseFloat(expenseField.value)) || 0;
 
