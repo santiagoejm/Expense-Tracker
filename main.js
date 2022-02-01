@@ -32,6 +32,14 @@ const updaterHanndler = (e) => {
 
   incomeField.value = "";
   expenseField.value = "";
+
+  if (incomeCount - expenseCount < 0) {
+    totalBalance.style.color = "#b71414";
+  } else if (incomeCount - expenseCount > 0) {
+    totalBalance.style.color = "#096313";
+  } else {
+    totalBalance.style.color = "#fff";
+  }
 };
 
 toggleBtn.addEventListener("click", toggleHandler);
