@@ -15,19 +15,20 @@ const toggleHandler = () => {
   }
 };
 
+let incomeCount = 0;
+let expenseCount = 0;
+
 const updaterHanndler = (e) => {
   e.preventDefault();
   let newIncome = parseFloat(incomeField.value) || 0;
   let newExpense = parseFloat(expenseField.value) || 0;
-  let newBalance = newIncome - newExpense;
 
-  let currentIncome = parseFloat(totalIncome.textContent);
-  let currentExpense = parseFloat(totalExpense.textContent);
-  let currentBalance = newBalance;
+  incomeCount += newIncome;
+  expenseCount += newExpense;
 
-  totalIncome.textContent = `${(currentIncome + newIncome).toFixed(2)}€`;
-  totalExpense.textContent = `${(currentExpense + newExpense).toFixed(2)}€`;
-  totalBalance.textContent = `${currentBalance}€`;
+  totalIncome.textContent = `${incomeCount.toFixed(2)}€`;
+  totalExpense.textContent = `${expenseCount.toFixed(2)}€`;
+  totalBalance.textContent = `${(incomeCount - expenseCount).toFixed(2)}€`;
 
   incomeField.value = "";
   expenseField.value = "";
