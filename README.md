@@ -19,7 +19,7 @@ The _Styling_ was developed with **CSS**, and it's developed with a dark theme.
 
 ## Usage
 
-If you wanna take quick usage of this project, go to next section and follow the step
+If you wanna take a quick usage of this project, go to next section and follow the step
 
 ## Live Demo
 
